@@ -9,17 +9,9 @@ class Drop {
     if (y > height){
       y = (float)Math.random() * -1000;
     }
-    
-  
-  
-  
   }
-  
-  
+ 
   void show(){
-  ellipse( x, y, rad, rad);
-  
-  
-  
+    ellipse( x, y, rad, rad)
   }
 }
