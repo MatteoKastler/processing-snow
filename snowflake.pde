@@ -1,19 +1,17 @@
-Flake[] flakes = new Flake[200];
-
-void setup(){
- for (int i = 0 ; i < flakes.length; i++){
-   flakes[i] = new Flake();
- } 
-}
-
-public void settings() {
-  size(1920, 1080);
-}
-
-void draw(){
-  background (256);
-  for ( int i = 0; i < flakes.length; i++){
-    flakes[i].move();
-    flakes[i].show();
+class Flake {
+  float y = (float)Math.random() * -1000;
+  float x = (float)Math.random() * width;
+  float rad = random(1,10); 
+  float yspeed = random(2,5);
+  
+  void move(){
+    y += yspeed ;
+    if (y > height){
+      y = (float)Math.random() * -1000;
+    }
+  }
+ 
+  void show(){
+    ellipse( x, y, rad, rad);
   }
 }
